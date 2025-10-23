@@ -1,0 +1,271 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: content-box;
+scroll-behavior: smooth;
+font-family: 'Times New Roman', Times, serif;
+}
+body{
+color: rgb(172, 57, 172);
+line-height: 1.5;
+background: rgb(255, 198, 207);
+background-size: content;
+background-attachment:fixed;
+background-blend-mode:multiply;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:beige;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  box-shadow: 0 4px 10px rgba(227, 233, 235, 0.5);
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: lightcoral;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: lightcoral;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: lightcoral;
+  background: #f1f1f1;
+}
+
+section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2.pop {
+  font-size: 30px;
+  color: #8a2364ad;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+p.pop {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(122, 61, 100, 0.788);
+  transition: transform 0.3s ease;
+}
+p.pop:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 79, 191, 0.3);
+}
+
+
+
+.product-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  align-items:flex-start;
+}
+
+.product-card {
+  width: 230px;
+  height: 370px;
+  background: rgba(255, 255, 255, 0.09);
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(225, 182, 193, 0.9);
+  background-color: solid hotpink;
+  transition: 0.3s;
+}
+
+.product-card img {
+  width: 50;
+  height: 150px;
+  object-fit: flex;
+  border-radius: 10px;
+}
+.product-card h3 {
+  margin-top: 10px;
+  color: #ff4fbf;
+  font-size: 20 Em;
+}
+.product-card p {
+font-size: rem; 
+color: #f1f1f1;
+}
+
+.pop {
+  animation: slidePop 1s ease-out forwards;
+  line-height: 1.5;
+  animation-delay: 0.1s;
+  font-size: 18px;
+  transform: scale(0.5);
+  font-family:'Times New Roman', Times, serif;
+}
+
+.price {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.2em;
+  color: darkorchid;
+  font-weight: bold;
+}
+
+.btn {
+  background: #ff4fbf;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ff77cf;
+  transform: scale(1.1);
+}
+
+.section-dark {
+  background-color: #0a0a0a;
+}
+
+.section-pink {
+  background: radial-gradient(circle at top left, #ff85c0, #000);
+}
+/*
+{}
+*/
+footer {
+  background: darkviolet;
+  padding: 50px;
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.links {
+ text-align: center;
+ flex-direction: column;
+
+}
+
+@keyframes slidePop {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 100px 8%;
+  }
+
+  h2.pop {
+    font-size: 1.9rem;
+  }
+
+  p.pop {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 0.5fr;
+    gap: 25px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card img {
+    height: 180px;
+    border-radius: 10px;
+  }
+ .navbar a {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 100px 8%;
+  }
+
+  h2.pop {
+    font-size: 1.9rem;
+  }
+
+  p.pop {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card img {
+    height: 180px;
+    border-radius: 10px;
+  }
+}
